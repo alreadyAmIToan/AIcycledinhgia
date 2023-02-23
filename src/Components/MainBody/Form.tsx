@@ -24,7 +24,7 @@ const CoverBox = styled.div<BannerProps>`
   box-shadow: 0px 4px 25px rgba(102, 105, 133, 0.2);
   border-radius: 24px;
   position: relative;
-  top: ${(props) => (props.isTabletOrMobile ? "0%" : "-20%")};
+  top: ${(props) => (props.isTabletOrMobile ? "0%" : "-10%")};
 `;
 const DetailText = styled.div`
   display: flex;
