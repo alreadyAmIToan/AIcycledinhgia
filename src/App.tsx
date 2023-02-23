@@ -1,7 +1,9 @@
-import { Container, Grid } from '@mui/material';
-import Banner from 'Components/Banner';
-import Navbar from 'Components/Navbar';
-import './App.css';
+import { Container, Grid } from "@mui/material";
+import Banner from "Components/Banner";
+import FormAICycle from "Components/MainBody/Form";
+import SideBanner from "Components/MainBody/Sidebanner";
+import Navbar from "Components/Navbar";
+import "./App.css";
 
 function App() {
   return (
@@ -11,29 +13,26 @@ function App() {
       </Container>
       <Banner />
       <Container maxWidth="xl">
-        <Grid container spacing={1}>
-          <Grid
-            item
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            sm={12}
-            md={6}
-          >
-            <div>
-              
-            </div>
+        <div>
+          <Grid container >
+            <Grid
+              item
+              sm={12}
+              md={6}
+            >
+              <FormAICycle />
+            </Grid>
+            <Grid
+              item
+              justifyContent={"center"}
+              alignItems={"start"}
+              sm={12}
+              md={6}
+            >
+              <SideBanner/>
+            </Grid>
           </Grid>
-          <Grid
-            item
-            justifyContent={"center"}
-            alignItems={"start"}
-            sm={12}
-            md={6}
-          >
-            Side
-          </Grid>
-        </Grid>
+        </div>
       </Container>
     </div>
   );
