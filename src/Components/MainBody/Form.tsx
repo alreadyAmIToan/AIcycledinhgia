@@ -23,11 +23,8 @@ const CoverBox = styled.div<BannerProps>`
   background: #ffffff;
   box-shadow: 0px 4px 25px rgba(102, 105, 133, 0.2);
   border-radius: 24px;
-  ${(props) =>
-    !props.isTabletOrMobile
-      ? `position: relative;
-  top: -10%;`
-      : ``}
+  position: relative;
+  top: ${(props) => (props.isTabletOrMobile ? "0%" : "-20%")};
 `;
 const DetailText = styled.div`
   display: flex;
@@ -63,8 +60,9 @@ const LabelCheckbox = styled.div`
 const FormAICycle = () => {
   const [openDetail, setOpenDetail] = useState(false);
   const isTabletOrMobile = useMediaQuery("(max-width: 600px)");
+  console.log("isTabletOrMobile", isTabletOrMobile);
   return (
-    <CoverBox isTabletOrMobile>
+    <CoverBox isTabletOrMobile={isTabletOrMobile}>
       <Formik onSubmit={() => {}} initialValues={{}}>
         <Form>
           <Grid
