@@ -3,7 +3,7 @@ import SideImage from "assets/Images/Group 1.png"
 const SideBanner = () =>
 {
   const isTabletOrMobile = useMediaQuery("(max-width: 600px)");
-  const flexibleStyle : any = isTabletOrMobile
+  const flexibleStyle : React.CSSProperties = isTabletOrMobile
     ? { width: "100%"}
     : { position: "relative", top: "-5%", padding: "2%", width: "100%" };
   return (

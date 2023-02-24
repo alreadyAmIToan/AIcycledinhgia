@@ -74,6 +74,7 @@ const FormAICycle = () => {
             alignItems={"center"}
             p={5}
             rowGap={"20px"}
+            style={{padding:'20px'}}
           >
             <Grid item xs={12}>
               <FormTitle>
